@@ -10,8 +10,9 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
+    "moduleDetection": "node",
     "noEmit": true,
     "jsx": "react-jsx",
 
@@ -20,7 +21,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@sozialhelden/ietf-language-tags": [
+        "../node_modules/@sozialhelden/ietf-language-tags/dist/cjs"
+      ]
+    },
+    "types": ["vite/client", "vite-plugin-pwa/vanillajs"]
   },
   "include": ["src"]
 }
