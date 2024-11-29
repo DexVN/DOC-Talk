@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
-
-const themer = require("tailwindcss-themer");
+// import themer from "tailwindcss-themer";
+import tailwindScrollbar from "tailwind-scrollbar";
 
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -27,7 +27,7 @@ const config: Config = {
     }
   },
   plugins: [
-    require("tailwind-scrollbar"),
+    tailwindScrollbar,
     plugin(({ addVariant }) => {
       addVariant("dir-neutral", "[dir] &");
     }),
